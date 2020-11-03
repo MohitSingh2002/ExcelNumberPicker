@@ -44,6 +44,12 @@ public class MainActivity extends AppCompatActivity {
                 return showColumnNumber ? value + " - " + getColName(value) : getColName(value);
             }
         });
+
+        View firstItem = binding.numberPicker.getChildAt(0);
+        if(firstItem != null) {
+            firstItem.setVisibility(View.INVISIBLE);
+        }
+
     }
 
     public void changeColumnCondition(View view) {
